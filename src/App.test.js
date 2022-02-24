@@ -1,5 +1,5 @@
 import React from 'react';
-import App from './App';
+import App, { calcularNovoSaldo } from './App';
 const { render, screen } = require('@testing-library/react');
 
 describe('Component principal', () => {
@@ -20,6 +20,16 @@ describe('Component principal', () => {
       render(<App />);
 
       expect(screen.getByText('Realizar operação')).toBeInTheDocument();
+    });
+  });
+
+  describe('Quando eu realizo uma transação', () => {
+    it('que é um saque, o valor vai diminuir', () => {
+      const valores = { transacao: 'saque', valor: 50 };
+
+      const result = calcularNovoSaldo(valores, 150);
+
+      expect(result).toBe(100);
     });
   });
 });

@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is the artifact of the course [React: Automatizando os testes em aplicações front-end](https://cursos.alura.com.br/course/react-automatizando-testes)
 
 ## Available Scripts
 
